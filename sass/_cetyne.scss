@@ -1,0 +1,128 @@
+body {
+  @include center(960px);
+}
+
+
+a {
+  @include link-colors($normal, $hover, $active, $visited, $focus);
+  text-decoration: none;
+}
+
+header {
+
+  .site-branding {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: 50px;
+      text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-decoration: none;
+  }
+}
+
+.main-navigation {
+  ul {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: none;
+    float: right;
+    vertical-align: bottom;
+    background-color: $navigace-pozadi;
+    li {
+      display: block;
+      padding-left: 15px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 15px;
+      @include link-colors($normal, $hover, $active, $visited, $focus);
+    }
+  }
+}
+
+.site-main {
+  position: relative;
+  @include center(960px);
+}
+
+.site-header {
+  position: relative;
+  @include center(960px);
+  background-image: url("img/hello.jpg");
+  height: 350px;
+  padding: none;
+}
+
+.site-footer {
+  @include center(960px);
+}
+
+.site-content {
+  @include center(960px);
+}
+
+.site-title {
+  font-size: 3em;
+}
+
+.post {
+  @include column(1/3);
+  margin-top: 15px;
+  background-color: #ffffcc;
+  box-shadow: black 1px 1px 5px;
+  @media screen and (max-width: 520px) {
+    @include column(1/1);
+  }
+}
+
+.entry-content {
+  p {
+    padding: 15px;
+  }
+  img {
+    margin-top: none;
+  }
+}
+
+.entry-header {
+  position: relative;
+  height: 80px;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  background-color: #684644;
+  
+  h1 {
+    font-size: 2em;
+    color: #ffffcc;
+  }
+
+}
+
+.post-cety {
+  @include column(2/3);
+  margin-top: 15px;
+  @media screen and (max-width: 520px) {
+    @include column(1/1);
+  }
+}
+
+aside {
+  clear: both;
+  @include column(1/3);
+  @media screen and (max-width: 520px) {
+    @include column(1/1);
+  }
+}
+
+.comment-respond {
+  clear: both;
+}
